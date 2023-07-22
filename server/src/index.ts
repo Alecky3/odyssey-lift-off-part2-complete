@@ -35,7 +35,7 @@ async function startApolloServer() {
     resolvers
   });
   const { url } = await startStandaloneServer(server, {
-    context:async () => {
+    context: async () => {
       const {cache} = server
       return {
         datasources: {
